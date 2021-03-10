@@ -1,6 +1,6 @@
 package platform
 
-import "github.com/remogatto/egl"
+import "github.com/kytart/goegl/pkg/egl"
 
 type EGLState struct {
 	Display egl.Display

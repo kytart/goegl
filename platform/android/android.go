@@ -4,8 +4,9 @@ package android
 
 import (
 	"unsafe"
-	"github.com/remogatto/egl"
-	"github.com/remogatto/egl/platform"
+
+	"github.com/kytart/goegl/pkg/egl"
+	"github.com/kytart/goegl/platform"
 )
 
 // #include <android/native_window.h>

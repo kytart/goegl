@@ -28,14 +28,14 @@ per-platform/per-implementation initialization [boilerplate
 code](platform/). By default egl will use the xorg implementation.
 
 ~~~bash
-$ go get github.com/remogatto/egl # use xorg by default
+$ go get github.com/kytart/goegl # use xorg by default
 ~~~
 
 To build egl against a particular implementation use the specific
 build constraint, for example:
 
 ~~~bash
-$ go get -tags=raspberry github.com/remogatto/egl # install on the raspberry
+$ go get -tags=raspberry github.com/kytart/goegl # install on the raspberry
 ~~~
 
 On a debian like system you will need to install the following prerequisites:

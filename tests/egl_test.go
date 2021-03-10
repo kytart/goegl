@@ -1,9 +1,10 @@
 package test
 
 import (
-	"github.com/remogatto/egl"
-	pt "github.com/remogatto/prettytest"
 	"testing"
+
+	"github.com/kytart/goegl/pkg/egl"
+	pt "github.com/remogatto/prettytest"
 )
 
 type testInitEGLSuite struct{ pt.Suite }

@@ -3,13 +3,14 @@
 package test
 
 import (
+	"log"
+
 	"github.com/BurntSushi/xgb/xproto"
 	"github.com/BurntSushi/xgbutil"
 	"github.com/BurntSushi/xgbutil/mousebind"
 	"github.com/BurntSushi/xgbutil/xevent"
 	"github.com/BurntSushi/xgbutil/xwindow"
-	"github.com/remogatto/egl"
-	"log"
+	"github.com/kytart/goegl/pkg/egl"
 )
 
 const (

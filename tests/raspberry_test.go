@@ -3,7 +3,7 @@
 package test
 
 import (
-	"github.com/remogatto/egl"
+	"github.com/kytart/goegl/pkg/egl"
 	"unsafe"
 )
 

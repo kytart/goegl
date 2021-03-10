@@ -1,11 +1,10 @@
 package raspberry
 
 import (
-	"github.com/remogatto/egl"
-	"github.com/remogatto/egl/platform"
-	"log"
-	"runtime/debug"
 	"unsafe"
+
+	"github.com/kytart/goegl/pkg/egl"
+	"github.com/kytart/goegl/platform"
 )
 
 var (
