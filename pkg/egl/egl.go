@@ -30,6 +30,7 @@ package egl
 import "C"
 
 import (
+	"fmt"
 	"unsafe"
 )
 
@@ -249,4 +250,40 @@ func GetCurrentContext() Context {
 }
 func GetError() int32 {
 	return int32(C.eglGetError())
+}
+
+func ErrorCodeToError(errorCode int32) error {
+	switch errorCode {
+	case C.EGL_SUCCESS:
+		return fmt.Errorf("SUCCESS");
+	case C.EGL_NOT_INITIALIZED:
+		return fmt.Errorf("NOT_INITIALIZED");
+	case C.EGL_BAD_ACCESS:
+		return fmt.Errorf("BAD_ACCESS");
+	case C.EGL_BAD_ALLOC:
+		return fmt.Errorf("BAD_ALLOC");
+	case C.EGL_BAD_ATTRIBUTE:
+		return fmt.Errorf("BAD_ATTRIBUTE");
+	case C.EGL_BAD_CONTEXT:
+		return fmt.Errorf("BAD_CONTEXT");
+	case C.EGL_BAD_CONFIG:
+		return fmt.Errorf("BAD_CONFIG");
+	case C.EGL_BAD_CURRENT_SURFACE:
+		return fmt.Errorf("BAD_CURRENT_SURFACE");
+	case C.EGL_BAD_DISPLAY:
+		return fmt.Errorf("BAD_DISPLAY");
+	case C.EGL_BAD_SURFACE:
+		return fmt.Errorf("BAD_SURFACE");
+	case C.EGL_BAD_MATCH:
+		return fmt.Errorf("BAD_MATCH");
+	case C.EGL_BAD_PARAMETER:
+		return fmt.Errorf("BAD_PARAMETER");
+	case C.EGL_BAD_NATIVE_PIXMAP:
+		return fmt.Errorf("BAD_NATIVE_PIXMAP");
+	case C.EGL_BAD_NATIVE_WINDOW:
+		return fmt.Errorf("BAD_NATIVE_WINDOW");
+	case C.EGL_CONTEXT_LOST:
+		return fmt.Errorf("CONTEXT_LOST");
+	}
+	return nil
 }
